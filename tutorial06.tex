@@ -1,0 +1,150 @@
+\documentclass[10pt, letterpaper]{article}
+
+%PREAMBLE
+%\usepackage[top=1in, bottom=1in, left=0.75in, right=0.75in, paperwidth=5in, paperheight=7in]{geometry}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amssymb, amsmath}   % R, Z, Q
+\usepackage{tikz,pgfplots}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+
+%MACRO
+\def\eq1{y=\dfrac{x}{3x^2+x+1}}
+\newcommand{\set}[1]{\setlength\itemsep{#1em}} %add spaces between items
+
+\newcommand\calculator{\tikz{     %CALCULATOR COMMAND
+     \node (c)[inner sep=0pt, draw, fill=black,
+anchor=south west]{\phantom{N}};
+	\begin{scope}[x=(c.south east),y=(c.north 
+	west)] \fill[white](.1,.7) rectangle(.9,.9);
+	\foreach \x in {.1,.33,.55,.79}{
+	\foreach \y in {.1,.24,.38,.53}{
+	\fill[white](\x,\y) rectangle +(.11,.07);}}
+	\end{scope} }}
+	\def\calcicon#1{\noindent#1 \calculator\ }
+
+\title{My \LaTeX\ Document}
+\author{Filiberto Biolcati Rinaldi}
+%\date{August 29, 2025}
+\date{\today}
+
+
+
+\begin{document}
+
+
+\tableofcontents
+\maketitle         % We need to make title to see it
+\textbf{Critical Thinking Questions}
+
+%\includegraphics[scale=0.12]{sardegna} 
+%\includegraphics[width=5in]{sardegna}
+%\includegraphics[width=0.75\textwidth]{sardegna} 
+\begin{center}
+\includegraphics[width=0.75\textwidth]{sardegna}
+\end{center}
+
+\begin{figure}[H]    %here [t] bottom [t] top
+\centering
+\includegraphics[width=0.75\textwidth]{sardegna}\\
+\caption{This is a picture of Sardinia}
+\end{figure}
+
+\begin{enumerate}
+\set{1.2}  %It refers to the new command in the macro
+\item \calculator\ Let's examine the function $\eq1$
+
+\item This is the symbol for the set of all real numbers: $\mathbb{R}$
+
+\item This is the symbol for the set of all integer numbers: $\mathbb{Z}$
+
+\item This is the symbol for the set of all rational numbers: $\mathbb{Q}$
+ 
+\item This will produce \textit{italicized}  text.
+
+\item This will produce \textbf{bold face}  text.
+
+\item This will produce \textsc{small caps} text.
+
+\item This will produce \texttt{typewriter fonts} text.
+
+\item Please visit my website at 
+\url{https://github.com/filibtester}.
+
+\end{enumerate}
+
+You can see those tutorials \href{https://github.com/filibtester/latex}{here}.
+
+\vspace{1cm}
+Please excuse my dear aunt Sally.
+
+Please excuse my \begin{large}dear aunt Sally\end{large}.
+
+Please excuse my \begin{Large}dear aunt Sally\end{Large}.
+
+Please excuse my \begin{huge} dear aunt Sally\end{huge}.
+
+Please excuse my \begin{Huge} dear aunt Sally\end{Huge}.
+
+\vspace{1cm} 
+
+Please excuse my \begin{normalsize} dear aunt Sally\end{normalsize}. 
+
+Please excuse my \begin{small} dear aunt Sally\end{small}.
+
+Please excuse my \begin{scriptsize} dear aunt Sally\end{scriptsize}. 
+
+Please excuse my \begin{tiny} dear aunt Sally\end{tiny}. 
+
+\begin{center}
+This line is centered.
+\end{center}
+
+\begin{flushleft}
+This line is left-justified.
+\end{flushleft}
+
+\begin{flushright}
+This line is right-justified.
+\end{flushright}
+
+\centering
+This line is centered. \\
+This line is left-justified.\\
+This line is right-justified.
+
+\vspace{1 cm}
+
+\Large
+This line is centered. 
+
+This line is left-justified.
+
+This line is right-justified.
+
+\vspace{1 cm}
+
+\tiny
+This line is centered. 
+
+This line is left-justified.
+
+This line is right-justified.
+
+\raggedright
+\section{Linear Functions}
+	\subsection{Slope-Intercept Form}
+		\subsubsection{Example 1}
+		\subsubsection{Example 2}
+	\subsection{Standard Form}
+	\subsection{Point-Slope Form}
+\section{Quadratic Functions}
+	\subsection{Vertex Form}
+	\subsection{Standard Form}
+	\subsection{Factored Form}
+
+
+
+\end{document}
+
